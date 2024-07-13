@@ -19,7 +19,6 @@ const initdb = async () =>
 // TODO: Add logic to a method that accepts some content and adds it to the database
 // This function is for updating the database with the content.
 export const putDb = async (id, content) => {
-  console.log("Updated the database with the following content:", content);
   // This function is used to open the database and create a transaction.
   const jateDb = await openDB("jate", 1);
   // This function is used to create a transaction and get the object store.

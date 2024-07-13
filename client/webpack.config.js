@@ -48,11 +48,18 @@ module.exports = () => {
         start_url: "/",
         // This is the display mode of the app.
         publicPath: "./",
+        display: "standalone",
         icons: [
           {
-            src: path.resolve("src/assets/icons/icon-512x512.png"),
+            src: path.resolve("./src/images/logo.png"),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join("assets", "icons"),
+          },
+          {
+            src: path.resolve("./favicon.ico"),
+            size: [48, 72, 96],
+            destination: path.join("assets", "icons"),
+            type: "image/ico",
           },
         ],
       }),
