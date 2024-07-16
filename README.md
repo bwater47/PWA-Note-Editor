@@ -32,14 +32,14 @@ The PWA Note Editor is an installable app that lets users take and cache notes f
 
 - <strong>PWA Note Editor Link</strong>
 
-- [Website]()
+- [Website](https://pwa-note-editor.onrender.com/)
 
 - <strong>PWA Note Editor Screenshots</strong>
 
-- ![Screenshot]()
-- ![Screenshot]()
-- ![Screenshot]()
-- ![Screenshot]()
+- ![Screenshot](./client/src/images/Uninstalled.png)
+- ![Screenshot](./client/src/images/Manifest.png)
+- ![Screenshot](./client/src/images/SVW.png)
+- ![Screenshot](./client/src/images/IDB.png)
 
 ## Support
 
