@@ -18,7 +18,7 @@ const initdb = async () =>
 
 // TODO: Add logic to a method that accepts some content and adds it to the database
 // This function is for updating the database with the content.
-export const putDb = async (id, content) => {
+export const putDb = async (content) => {
   // This function is used to open the database and create a transaction.
   const jateDb = await openDB("jate", 1);
   // This function is used to create a transaction and get the object store.
@@ -26,7 +26,7 @@ export const putDb = async (id, content) => {
   // This function is used to pass the object store to the store variable.
   const store = tx.objectStore("jate");
   // This function is passing the store variable to the request variable, and the request variable is used to put the content in the database.
-  const request = store.put({ id: id, jate: content });
+  const request = store.put({ id: 1, value: content });
   const result = await request;
   console.log("Data saved to the database:", result);
 };
@@ -38,10 +38,10 @@ export const getDb = async () => {
   const jateDb = await openDB("jate", 1);
   const tx = jateDb.transaction("jate", "readonly");
   const store = tx.objectStore("jate");
-  const request = store.getAll();
+  const request = store.get(1);
   const result = await request;
   console.log("Data retrieved from the database:", result);
-  return result;
+  return result?.value;
 };
 
 initdb();

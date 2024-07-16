@@ -22,8 +22,6 @@ module.exports = () => {
       // This Webpack plugin generates our html file and injects the bundles.
       new HtmlWebpackPlugin({
         template: "./index.html",
-        filename: "./index.html",
-        chunks: ["main"],
       }),
       // This injects our customer service worker into the service worker file.
       new InjectManifest({
@@ -48,7 +46,6 @@ module.exports = () => {
         start_url: "/",
         // This is the display mode of the app.
         publicPath: "./",
-        display: "standalone",
         icons: [
           {
             src: path.resolve("./src/images/logo.png"),
@@ -57,7 +54,7 @@ module.exports = () => {
           },
           {
             src: path.resolve("./favicon.ico"),
-            size: [48, 72, 96],
+            size: [48],
             destination: path.join("assets", "icons"),
             type: "image/ico",
           },
@@ -67,23 +64,28 @@ module.exports = () => {
 
     module: {
       // The rules in the module are used to define how webpack should handle different file types.
-      rules: [{
-        // Regex to find the css files.
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
-      },
-      {
-        // Regex to find the js files.
-        test: /\.m?js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env"],
-            plugins: ["@babel/plugin-transform-runtime", "@babel/plugin-proposal-object-rest-spread"],
+      rules: [
+        {
+          // Regex to find the css files.
+          test: /\.css$/,
+          use: ["style-loader", "css-loader"],
+        },
+        {
+          // Regex to find the js files.
+          test: /\.m?js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/preset-env"],
+              plugins: [
+                "@babel/plugin-transform-runtime",
+                "@babel/plugin-proposal-object-rest-spread",
+              ],
+            },
           },
         },
-      }],
+      ],
     },
   };
 };
