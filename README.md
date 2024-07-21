@@ -60,7 +60,7 @@ People who worked on this project were Brennan Waterbury. You can contact the co
 
 ## Features
 
-<strong>Social Network API</strong>: The Social API Turbo allows developers who are making a social media network to tap into the already built NoSQL database provided by this package.
+<strong>PWA Note Editor</strong>: The PWA Note Editor is an application showcasing that I can create an installable application.
 
 ## Contributing
 
