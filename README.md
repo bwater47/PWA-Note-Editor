@@ -70,6 +70,10 @@ Contributing is allowed if you're in the U of U Coding Bootcamp. Contact us on t
 
 ## Authors and Acknowledgment
 
+Workbox  :   chrome for developers. Chrome for Developers. (07/10/24). https://developer.chrome.com/docs/workbox/
+
+Concepts. webpack. (07/10/24). https://webpack.js.org/concepts/#entry
+
 The developer Data Platform. MongoDB. (07/10/24). https://www.mongodb.com/
 
 Getting started. Mongoose v8.4.4: Getting Started. (07/10/24). https://mongoosejs.com/docs/
